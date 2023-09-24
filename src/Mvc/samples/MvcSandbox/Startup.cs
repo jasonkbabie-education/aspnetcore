@@ -24,23 +24,25 @@ public class Startup
 
         app.UseRouting();
 
+        app.UseMiddleware<FeatureSwitchAuthMiddleware>();
         static void ConfigureEndpoints(IEndpointRouteBuilder endpoints)
         {
-            endpoints.MapGet("/MapGet", () => "MapGet");
+            //endpoints.MapGet("/MapGet", () => "MapGet");
 
-            endpoints.MapControllers();
-            endpoints.MapControllerRoute(
-                Guid.NewGuid().ToString(),
-                "{controller=Home}/{action=Index}/{id?}");
+            //endpoints.MapControllers();
+            //endpoints.MapControllerRoute(
+            //    Guid.NewGuid().ToString(),
+            //    "{controller=Home}/{action=Index}/{id?}");
 
             endpoints.MapRazorPages();
         }
 
         app.UseEndpoints(builder =>
         {
+            builder.MapDefaultControllerRoute();
             ConfigureEndpoints(builder);
-            var group = builder.MapGroup("/group");
-            ConfigureEndpoints(group);
+            //var group = builder.MapGroup("/group");
+            //ConfigureEndpoints(group);
         });
     }
 

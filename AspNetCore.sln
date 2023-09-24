@@ -1770,7 +1770,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Components.WasmMinimal", "s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinimalFormSample", "src\Antiforgery\samples\MinimalFormSample\MinimalFormSample.csproj", "{F7BCD3AD-31E2-4223-B215-851C3D0AB78A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcFormSample", "src\Mvc\samples\MvcFormSample\MvcFormSample.csproj", "{055F86AA-FB37-40CC-B39E-C29CE7547BB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcFormSample", "src\Mvc\samples\MvcFormSample\MvcFormSample.csproj", "{055F86AA-FB37-40CC-B39E-C29CE7547BB7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.OutputCaching.Microbenchmarks", "src\Middleware\OutputCaching\perf\Microbenchmarks\Microsoft.AspNetCore.OutputCaching.Microbenchmarks.csproj", "{137AD17B-066F-4ED4-80FA-8D21C7B76CA6}"
 EndProject

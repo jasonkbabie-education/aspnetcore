@@ -48,7 +48,7 @@ public static class ControllerEndpointRouteBuilderExtensions
         var dataSource = GetOrCreateDataSource(endpoints);
         return dataSource.AddRoute(
             "default",
-            "{controller=Home}/{action=Index}/{id?}",
+            "{controller=Home}/{action=Index}/{id:int?}",
             defaults: null,
             constraints: null,
             dataTokens: null);
@@ -513,7 +513,7 @@ public static class ControllerEndpointRouteBuilderExtensions
 
     private static ControllerActionEndpointDataSource GetOrCreateDataSource(IEndpointRouteBuilder endpoints)
     {
-        var dataSource = endpoints.DataSources.OfType<ControllerActionEndpointDataSource>().FirstOrDefault();
+         var dataSource = endpoints.DataSources.OfType<ControllerActionEndpointDataSource>().FirstOrDefault();
         if (dataSource == null)
         {
             var orderProvider = endpoints.ServiceProvider.GetRequiredService<OrderedEndpointsSequenceProviderCache>();

@@ -69,7 +69,7 @@ internal sealed partial class EndpointMiddleware
 
                 try
                 {
-                    var requestTask = endpoint.RequestDelegate(httpContext);
+                    var requestTask = endpoint?.RequestDelegate.Invoke(httpContext);
                     if (!requestTask.IsCompletedSuccessfully)
                     {
                         return AwaitRequestTask(endpoint, requestTask, _logger);
